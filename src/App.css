@@ -3,9 +3,13 @@
   font-family: "Montserrat", sans-serif;
   --color-primary: #5c47d2;
   --light-gray: lightgray;
+  --danger: rgb(223, 65, 65);
 }
 .color-primary {
   color: var(--color-primary);
+}
+.danger {
+  color: var(--danger);
 }
 .line-through {
   text-decoration: line-through;
@@ -28,6 +32,9 @@ header span {
 h1 {
   font-size: 40px;
 }
+h2 {
+  font-size: 28px;
+}
 main {
   width: 100%;
   height: calc(100vh - 200px);
@@ -41,6 +48,7 @@ form {
   height: auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .inputs-container {
   display: flex;
@@ -71,7 +79,9 @@ input[type="submit"] {
   font-size: 16px;
   padding: 0 15px;
 }
-
+span.danger {
+  margin-bottom: 20px;
+}
 .item-list {
   display: flex;
   flex-direction: column;
@@ -79,7 +89,7 @@ input[type="submit"] {
   align-items: center;
   gap: 20px;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .item {
   display: flex;
@@ -105,6 +115,18 @@ input[type="submit"] {
 .item i {
   font-size: 20px;
   cursor: pointer;
+}
+
+.items-done {
+  border-top: 1px solid var(--color-primary);
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 40px;
+}
+.items-done h2 {
+  align-self: center;
 }
 footer {
   height: 100px;
