@@ -58,20 +58,22 @@ function App() {
         </div>
 
         {/* Display all the items that are marked as done ==> items.isChecked is true */}
-        <div className="items-done">
-          <h2>Tasks done</h2>
-          {itemsChecked.map((item, index) => {
-            return (
-              <Item
-                key={item.name + index}
-                item={item.name}
-                index={index}
-                items={items}
-                setItems={setItems}
-              />
-            );
-          })}
-        </div>
+        {itemsChecked.length > 0 && (
+          <div className="items-done">
+            <h2>Tasks done</h2>
+            {itemsChecked.map((item, index) => {
+              return (
+                <Item
+                  key={item.name + index}
+                  item={item.name}
+                  index={index}
+                  items={items}
+                  setItems={setItems}
+                />
+              );
+            })}
+          </div>
+        )}
       </main>
       <Footer />
     </>
