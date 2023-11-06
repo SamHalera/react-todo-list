@@ -30,6 +30,7 @@ const Form = ({ items, setItems, value, setValue, error, setError }) => {
       }}
       className="form-create-to-do"
     >
+      <h2>Add a new task</h2>
       {error === true && (
         <span className="danger">You should add a new task!</span>
       )}

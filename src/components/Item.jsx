@@ -11,6 +11,7 @@ const Item = ({ item, index, items, setItems }) => {
         type="checkbox"
         name="item"
         id={`item-${index}`}
+        checked={items[index].isChecked}
       />
 
       {/* if the task is marked as done we add a class to the label for underline effect */}
